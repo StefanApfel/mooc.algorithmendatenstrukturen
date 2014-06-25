@@ -1,13 +1,17 @@
-﻿using AlgoTools;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//
+//
+//
+//
+//
 namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
 {
+  using AlgoTools;
+  using System;
 
+  // ===================================================================================================
+  /// <summary>Implementiert das Kapitel 3.1 des Iversity MOOCs Algorithmen und Datenstrukturen. Ziel 
+  /// ist den Collatz-Algorithmus in C# abzubilden.</summary>
+  // ===================================================================================================
   public sealed class Collatz : IChapterUnit
   {
     // -------------------------------------------------------------------------------------------------
@@ -18,19 +22,26 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
       get { return "Der Collatz-Algorithmus"; }
     }
 
+    // -------------------------------------------------------------------------------------------------
+    /// <summary>Gibt ob der Trace mit ausgegeben werden soll oder nicht..</summary>
+    // -------------------------------------------------------------------------------------------------
     private Boolean ShowTrace
     {
       get;
       set;
     }
 
+    // -------------------------------------------------------------------------------------------------
+    /// <summary>Erstellt eine neue Instanz der Klasse Collatz.</summary>
+    /// <param name="trace">Gibt an ob Tracing eingeschaltet ist oder nicht.</param>
+    // -------------------------------------------------------------------------------------------------
     public Collatz(Boolean trace)
     {
       ShowTrace = trace;
     }
 
     // -------------------------------------------------------------------------------------------------
-    /// <summary></summary>
+    /// <summary>Führt die Aufgabe aus.</summary>
     // -------------------------------------------------------------------------------------------------
     public void Run()
     {
