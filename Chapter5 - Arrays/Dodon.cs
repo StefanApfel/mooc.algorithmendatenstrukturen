@@ -60,7 +60,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Arrays
       {
         if(prisonCells[cellIndex])
         {
-          IO.PrintLine("Zelle #{0}, ", cellIndex + 1);
+          IO.PrintLine("Zelle #{0} ist offen.", cellIndex + 1);
         }
       }
     }

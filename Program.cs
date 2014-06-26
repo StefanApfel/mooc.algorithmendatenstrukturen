@@ -39,11 +39,19 @@ namespace StefanApfel.Learning.AlgorithemDataStructures
                                                           new Arrays.Suche(),
                                                           new Arrays.ZeilenNummerNorm(),
                                                           new Arrays.Dodon());
+        // Kapitel 9 - Sortieren ------------------------------------------------------------------
+        var chapter9 = new ConsoleMenu.Node("Sortieren",  new Sorting.SelectionSort(),
+                                                          new Sorting.BubbleSort(),
+                                                          new Sorting.MergeSort(),
+                                                          new Sorting.QuickSort(),
+                                                          new Sorting.HeapSort(),
+                                                          new Sorting.SortingComparison());
         // ----------------------------------------------------------------------------------------
 
         // Füge die Kapitel dem Menü hinzu.
         chapterMenu.Items.Add(chapter3);
         chapterMenu.Items.Add(chapter5);
+        chapterMenu.Items.Add(chapter9);
 
         // Startet das Menu...
         chapterMenu.Show();

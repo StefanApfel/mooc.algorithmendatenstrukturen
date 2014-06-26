@@ -56,12 +56,16 @@
     <Compile Include="Chapter5 - Arrays\Dodon.cs" />
     <Compile Include="Chapter5 - Arrays\ZeilenSummenNorm.cs" />
     <Compile Include="Chapter5 - Arrays\Ziffern.cs" />
+    <Compile Include="Chapter9 - Sorting\BubbleSort.cs" />
+    <Compile Include="Chapter9 - Sorting\HeapSort.cs" />
+    <Compile Include="Chapter9 - Sorting\MergeSort.cs" />
+    <Compile Include="Chapter9 - Sorting\QuickSort.cs" />
+    <Compile Include="Chapter9 - Sorting\SelectionSort.cs" />
+    <Compile Include="Chapter9 - Sorting\SortingComparison.cs" />
+    <Compile Include="Chapter9 - Sorting\SortingUnit.cs" />
     <Compile Include="ConsoleMenu\ConsoleMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
