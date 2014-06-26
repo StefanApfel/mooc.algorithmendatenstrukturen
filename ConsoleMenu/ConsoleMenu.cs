@@ -119,19 +119,23 @@ namespace System
     // -------------------------------------------------------------------------------------------------
     private void RunCommand(IConsoleMenuCommand command)
     {
-      try
+      do
       {
-        StartScreen(command.Name);
-        command.Run();
+        try
+        {
+          StartScreen(command.Name);
+          command.Run();
+        }
+        catch (Exception ex)
+        {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.WriteLine(ex.Message);
+          Console.ResetColor();
+        }
+        Console.WriteLine("\n\nDrücken Enter um die Anwendung zu wiederholen"+
+                          "\noder jede andere Taste um zum Menü zurückzukehren.");
       }
-      catch(Exception ex)
-      {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine(ex.Message);
-        Console.ResetColor();
-      }
-      Console.WriteLine("\n\nDrücken sie eine Taste um zum Menu zurückzukehren.");
-      Console.ReadKey();
+      while (Console.ReadKey().Key == ConsoleKey.Enter);
     }
 
     // -------------------------------------------------------------------------------------------------
