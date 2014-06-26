@@ -21,7 +21,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures
     {
       // Als kleine "Oberfläche" emuliert die Klasse ChapterMenu ein Anwendungsmenü bei dem die
       // einzelnen Kapitel und Units ausgewählt werden können.
-      using(var chapterMenu = new ConsoleMenu("Kapitelübersicht"))
+      using(var chapterMenu = new ConsoleMenu("Algorithmen & Datenstrukturen MOOC", "Kapitelübersicht"))
       {
         // Kapitel 3 - Grundlagen -----------------------------------------------------------------
         var chapter3 = new ConsoleMenu.Node("Grundlagen", new Basics.Collatz(true),

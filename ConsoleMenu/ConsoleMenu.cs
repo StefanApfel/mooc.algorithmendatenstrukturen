@@ -37,13 +37,15 @@ namespace System
     #region Konstruktor
     // -------------------------------------------------------------------------------------------------
     /// <summary>Erstellt eine neue Instanz der Klasse ConsoleMenu.</summary>
-    /// <param name="title">Titel des Basis Menüs.</param>
+    /// <param name="title">Titel der Anwendung</param>
+    /// <param name="rootName">Name des Basis Menüs.</param>
     // -------------------------------------------------------------------------------------------------
-    public ConsoleMenu(String title)
+    public ConsoleMenu(String title, String rootName)
     {
+      Console.Title = title;
       Console.OutputEncoding = System.Text.Encoding.Unicode;
       Items = new List<IConsoleMenuItem>();
-      Name = title;
+      Name = rootName;
     }
     #endregion
 
