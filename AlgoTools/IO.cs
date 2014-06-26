@@ -1,13 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//
+//
+//
+//
+//
 namespace AlgoTools
 {
+  using System;
+
+  // ===================================================================================================
+  /// <summary>Die Klasse ist eine lose C# Implementierung der Java Bibliothek AlgoTools.IO welches hier
+  /// https://www.iwi.hs-karlsruhe.de/lab/info01/Tutorial/download/AlgoTools/AlgoTools.IO.html herunter
+  /// geladen werden kann. Im wesentlichen Kapselt die Klasse Aufrufe der C# Klasse Console mit Checks
+  /// oder weiteren Verarbeitungsschritten (z.B. ReadInts wandelt einen String in ein Integer Array).
+  /// Die Klasse orientiert sich an den .NET Bennenungsrichtlinien.</summary>
+  // ===================================================================================================
   public static class IO
   {
+    #region Eingabe
+
     public static Int32 ReadInt(String prompt = null)
     {
       if (!String.IsNullOrEmpty(prompt))
@@ -47,16 +57,21 @@ namespace AlgoTools
       }
       return returnValue;
     }
+    #endregion
+
+    #region Ausgabe
+
+    public static void PrintLine()
+    {
+      Console.WriteLine();
+    }
 
     public static void Print(String text, params Object[] args)
     {
       Console.Write(text, args);
     }
 
-    public static void PrintLine()
-    {
-      Console.WriteLine();
-    }
+    
     public static void PrintLine(Int32 value)
     {
       Console.WriteLine(value);
@@ -70,11 +85,14 @@ namespace AlgoTools
     {
       Console.WriteLine(String.Join<ArrayType>(" ", array));
     }
+    #endregion
 
+    #region Fehler
 
     public static void Error(String text, params Object[] args)
     {
       throw new Exception(String.Format(text, args));
     }
+    #endregion
   }
 }
