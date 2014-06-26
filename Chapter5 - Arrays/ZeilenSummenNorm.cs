@@ -31,7 +31,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Arrays
       var matrixLength = 0;
       do
       {
-        matrixLength = IO.ReadInt("Bitte die Groesse der Matrix: ");
+        matrixLength = IO.ReadInt("Bitte die Größe der Matrix: ");
       } 
       while(matrixLength < 1);
 
@@ -64,7 +64,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Arrays
       {
         for (var column = 0; column < matrixLength; column++)
         {
-          IO.Print(matrix[row, column].ToString().PadLeft(3));
+          IO.Print("{0,4}",matrix[row, column]);
         }
         IO.PrintLine();
       }

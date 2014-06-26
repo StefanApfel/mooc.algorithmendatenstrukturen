@@ -63,17 +63,17 @@ namespace AlgoTools
 
     #region Ausgabe
 
-    public static void PrintLine()
-    {
-      Console.WriteLine();
-    }
-
     public static void Print(String text, params Object[] args)
     {
-      if(!String.IsNullOrEmpty(text))
+      if (!String.IsNullOrEmpty(text))
       {
         Console.Write(text, args);
       }
+    }
+
+    public static void PrintLine()
+    {
+      Console.WriteLine();
     }
 
     
@@ -93,10 +93,14 @@ namespace AlgoTools
     #endregion
 
     #region Fehler
-
+    // -------------------------------------------------------------------------------------------------
+    /// <summary>Wirft eine Fehlermeldung.</summary>
+    /// <param name="text">Fehlermeldungs Text.</param>
+    /// <param name="args">Optionale Platzhalter Argumente.</param>
+    // -------------------------------------------------------------------------------------------------
     public static void Error(String text, params Object[] args)
     {
-      throw new Exception(String.Format(text, args));
+      throw new ApplicationException(String.Format(text, args));
     }
     #endregion
   }

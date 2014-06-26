@@ -71,7 +71,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Arrays
       {
         for (var column = 0; column < depth; column++)
         {
-          IO.Print("|{0}", matrix[row, column].ToString().PadLeft(4, ' '));
+          IO.Print("{0,4}", matrix[row, column]);
         }
         IO.PrintLine();
       }

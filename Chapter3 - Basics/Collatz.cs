@@ -52,7 +52,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
       {
         if(ShowTrace)
         {
-          IO.PrintLine("{0} | {1}", value.ToString().PadLeft(5, ' '), steps);
+          IO.PrintLine("{0,3} | {1}", value, steps);
         }
 
         // Laut Collatz wird eine Zahl wenn sie nicht gerade ist, mit 3 multipliziert und um 1 erhöht...

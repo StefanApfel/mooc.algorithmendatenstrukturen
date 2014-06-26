@@ -42,7 +42,8 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Sorting
     }
 
     // -------------------------------------------------------------------------------------------------
-    /// <summary></summary>
+    /// <summary>Prüft ob das übergebene Array eine aufstegende Reihe ist.</summary>
+    /// <param name="result">Das zu prüfende Werte Array.</param>
     // -------------------------------------------------------------------------------------------------
     internal static void ValidateResult(Int32[] result)
     {
@@ -50,7 +51,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Sorting
       {
         if (result[index] < result[index - 1])
         {
-          throw new Exception("");
+          IO.Error("Das übergebene Array ist keine aufsteigende Reihe.");
         }
       }
     }
