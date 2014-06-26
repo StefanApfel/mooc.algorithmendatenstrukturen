@@ -20,10 +20,7 @@ namespace AlgoTools
 
     public static Int32 ReadInt(String prompt = null)
     {
-      if (!String.IsNullOrEmpty(prompt))
-      {
-        Console.Write(prompt);
-      }
+      Print(prompt);
 
       Int32 value = 0;
       String input = Console.ReadLine();
@@ -37,10 +34,7 @@ namespace AlgoTools
 
     public static Int32[] ReadInts(String prompt=null)
     {
-      if(!String.IsNullOrEmpty(prompt))
-      {
-        Console.WriteLine(prompt);
-      }
+      Print(prompt);
 
       var input = Console.ReadLine();
 
@@ -57,6 +51,14 @@ namespace AlgoTools
       }
       return returnValue;
     }
+
+    public static Char[] ReadChars(String prompt=null)
+    {
+      Print(prompt);
+
+      var input = Console.ReadLine();
+      return input.ToCharArray();
+    }
     #endregion
 
     #region Ausgabe
@@ -68,7 +70,10 @@ namespace AlgoTools
 
     public static void Print(String text, params Object[] args)
     {
-      Console.Write(text, args);
+      if(!String.IsNullOrEmpty(text))
+      {
+        Console.Write(text, args);
+      }
     }
 
     

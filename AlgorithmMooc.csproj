@@ -49,6 +49,13 @@
     <Compile Include="Chapter3 - Basics\Zahlenreihe.cs" />
     <Compile Include="Chapter3 - Basics\Primzahl.cs" />
     <Compile Include="Chapter3 - Basics\Jahreszeiten.cs" />
+    <Compile Include="Chapter5 - Arrays\KleinsterWert.cs" />
+    <Compile Include="Chapter5 - Arrays\Matrix.cs" />
+    <Compile Include="Chapter5 - Arrays\Primzahlen.cs" />
+    <Compile Include="Chapter5 - Arrays\Suche.cs" />
+    <Compile Include="Chapter5 - Arrays\Dodon.cs" />
+    <Compile Include="Chapter5 - Arrays\ZeilenSummenNorm.cs" />
+    <Compile Include="Chapter5 - Arrays\Ziffern.cs" />
     <Compile Include="ConsoleMenu\ConsoleMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

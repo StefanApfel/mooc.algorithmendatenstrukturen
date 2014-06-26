@@ -23,7 +23,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures
       // einzelnen Kapitel und Units ausgewählt werden können.
       using(var chapterMenu = new ConsoleMenu("Kapitelübersicht"))
       {
-        // Kapitel 3 - Grundlagen...
+        // Kapitel 3 - Grundlagen -----------------------------------------------------------------
         var chapter3 = new ConsoleMenu.Node("Grundlagen", new Basics.Collatz(true),
                                                           new Basics.Jahreszeiten(),
                                                           new Basics.Addieren(),
@@ -31,11 +31,19 @@ namespace StefanApfel.Learning.AlgorithemDataStructures
                                                           new Basics.GroessterGemeinsamerTeiler(),
                                                           new Basics.Zahlenreihe(),
                                                           new Basics.Primzahl());
-
-
+        // Kapitel 5 - Arrays ---------------------------------------------------------------------
+        var chapter5 = new ConsoleMenu.Node("Arrays",     new Arrays.Ziffern(),
+                                                          new Arrays.Matrix(),
+                                                          new Arrays.Primzahlen(),
+                                                          new Arrays.KleinsterWert(),
+                                                          new Arrays.Suche(),
+                                                          new Arrays.ZeilenNummerNorm(),
+                                                          new Arrays.Dodon());
+        // ----------------------------------------------------------------------------------------
 
         // Füge die Kapitel dem Menü hinzu.
         chapterMenu.Items.Add(chapter3);
+        chapterMenu.Items.Add(chapter5);
 
         // Startet das Menu...
         chapterMenu.Show();
