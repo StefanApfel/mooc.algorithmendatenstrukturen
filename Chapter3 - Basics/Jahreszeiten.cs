@@ -12,7 +12,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
   /// <summary>Implementiert Kapitel 3.4 des Iversity MOOCs Algorithmen und Datenstrukturen. Ziel ist es 
   /// anhand von Abfragen die Jahrezeit zu einem gegebenen Monat auszugeben.</summary>
   // ===================================================================================================
-  public sealed class Jahreszeiten : IChapterUnit
+  public sealed class Jahreszeiten : IConsoleMenuCommand
   {
     // -------------------------------------------------------------------------------------------------
     /// <summary>Gibt den Namen der Unit zurück.</summary>

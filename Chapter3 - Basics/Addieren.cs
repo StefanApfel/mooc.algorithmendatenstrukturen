@@ -12,7 +12,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
   /// <summary>Implementiert das Kapitel 3.7 des Iversity MOOCs Algorithmen und Datenstrukturen. Ziel 
   /// ist es in einer While-Schleife solange Werte zu addieren bis 0 eingegeben wird.</summary>
   // ===================================================================================================
-  public sealed class Addieren : IChapterUnit
+  public sealed class Addieren : IConsoleMenuCommand
   {
     // -------------------------------------------------------------------------------------------------
     /// <summary>Gibt den Namen der Unit zurück.</summary>

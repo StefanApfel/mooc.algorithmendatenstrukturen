@@ -12,7 +12,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
   /// <summary>Implementiert die Hausaufgabe 2 von Kapitel 3 des Iversity MOOCs Algorithmen und 
   /// Datenstrukturen. Ziel ist es eine Reihe von 1 bis zu einer angegeben Zahl auszugaben.</summary>
   // ===================================================================================================
-  public sealed class Zahlenreihe : IChapterUnit
+  public sealed class Zahlenreihe : IConsoleMenuCommand
   {
     // -------------------------------------------------------------------------------------------------
     /// <summary>Gibt den Namen der Unit zurück.</summary>

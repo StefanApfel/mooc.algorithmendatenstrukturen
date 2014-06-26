@@ -12,7 +12,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
   /// <summary>Implementiert das Kapitel 3.1 des Iversity MOOCs Algorithmen und Datenstrukturen. Ziel 
   /// ist den Collatz-Algorithmus in C# abzubilden.</summary>
   // ===================================================================================================
-  public sealed class Collatz : IChapterUnit
+  public sealed class Collatz : IConsoleMenuCommand
   {
     // -------------------------------------------------------------------------------------------------
     /// <summary>Gibt den Namen der Unit zurück.</summary>

@@ -12,7 +12,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
   /// <summary>Implementiert das Kapitel 3.8 des Iversity MOOCs Algorithmen und Datenstrukturen. Ziel 
   /// ist es in einer For-Schleife die Fakultät zu kalkulieren.</summary>
   // ===================================================================================================
-  public sealed class Fakultaet : IChapterUnit
+  public sealed class Fakultaet : IConsoleMenuCommand
   {
     // -------------------------------------------------------------------------------------------------
     /// <summary>Gibt den Namen der Unit zurück.</summary>

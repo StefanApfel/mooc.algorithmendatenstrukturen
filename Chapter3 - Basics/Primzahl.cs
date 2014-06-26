@@ -12,7 +12,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
   /// <summary>Implementiert die Hausaufgabe 4 von Kapitel 3 des Iversity MOOCs Algorithmen und 
   /// Datenstrukturen. Ziel ist es herauszufinden ob eine gegebene Zahl eine Primzahl ist.</summary>
   // ===================================================================================================
-  public sealed class Primzahl : IChapterUnit
+  public sealed class Primzahl : IConsoleMenuCommand
   {
     // -------------------------------------------------------------------------------------------------
     /// <summary>Gibt den Namen der Unit zurück.</summary>

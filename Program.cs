@@ -21,19 +21,24 @@ namespace StefanApfel.Learning.AlgorithemDataStructures
     {
       // Als kleine "Oberfläche" emuliert die Klasse ChapterMenu ein Anwendungsmenü bei dem die
       // einzelnen Kapitel und Units ausgewählt werden können.
-      using(var chapterMenu = new ChapterMenu())
+      using(var chapterMenu = new ConsoleMenu("Kapitelübersicht"))
       {
         // Kapitel 3 - Grundlagen...
-        chapterMenu.Add("Grundlagen", new Basics.Collatz(true),
-                                      new Basics.Jahreszeiten(),
-                                      new Basics.Addieren(),
-                                      new Basics.Fakultaet(),
-                                      new Basics.GroessterGemeinsamerTeiler(),
-                                      new Basics.Zahlenreihe(),
-                                      new Basics.Primzahl());
+        var chapter3 = new ConsoleMenu.Node("Grundlagen", new Basics.Collatz(true),
+                                                          new Basics.Jahreszeiten(),
+                                                          new Basics.Addieren(),
+                                                          new Basics.Fakultaet(),
+                                                          new Basics.GroessterGemeinsamerTeiler(),
+                                                          new Basics.Zahlenreihe(),
+                                                          new Basics.Primzahl());
+
+
+
+        // Füge die Kapitel dem Menü hinzu.
+        chapterMenu.Items.Add(chapter3);
 
         // Startet das Menu...
-        chapterMenu.Run();
+        chapterMenu.Show();
       }
     }
   }

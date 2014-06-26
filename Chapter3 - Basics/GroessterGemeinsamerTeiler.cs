@@ -12,7 +12,7 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
   /// <summary>Implementiert das Kapitel 3.9 des Iversity MOOCs Algorithmen und Datenstrukturen. Ziel 
   /// ist es den größten gemeinsamen Teiler zweier Zahlen zu ermitteln.</summary>
   // ===================================================================================================
-  public sealed class GroessterGemeinsamerTeiler : IChapterUnit
+  public sealed class GroessterGemeinsamerTeiler : IConsoleMenuCommand
   {
     // -------------------------------------------------------------------------------------------------
     /// <summary>Gibt den Namen der Unit zurück.</summary>

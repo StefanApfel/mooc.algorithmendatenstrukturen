@@ -49,7 +49,7 @@
     <Compile Include="Chapter3 - Basics\Zahlenreihe.cs" />
     <Compile Include="Chapter3 - Basics\Primzahl.cs" />
     <Compile Include="Chapter3 - Basics\Jahreszeiten.cs" />
-    <Compile Include="ChapterMenu.cs" />
+    <Compile Include="ConsoleMenu\ConsoleMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
