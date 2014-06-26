@@ -33,14 +33,14 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
         IO.Error("Die Zahl muss größer als 1 sein.");
       }
 
-      Boolean isPrime = false;
-      for(var index = 2; index < value-1 && !isPrime; index++)
+      Boolean isNotPrime = true;
+      for (var index = 2; index < value - 1 && isNotPrime; index++)
       {
         // Wenn die Zahl ohne Rest teilbar ist, kann es keine Primzahl sein.
-        isPrime = (value % index != 0);
+        isNotPrime = (value % index != 0);
       }
-      
-      IO.PrintLine("{0} ist {1} Primzahl.", value, (isPrime) ? "eine" : "keine");
+
+      IO.PrintLine("{0} ist {1} Primzahl.", value, (isNotPrime) ? "keine" : "eine");
     }
   }
 }
