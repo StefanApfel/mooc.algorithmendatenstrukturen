@@ -11,16 +11,8 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Sorting
   /// <summary>Implementiert einen SelectionSort Algorithmus zum Sortieren von Daten nach Kapitel 9.1
   /// des Iversity MOOCs Algorithmen und Datenstrukturen.</summary>
   // ===================================================================================================
-  public sealed class SelectionSort : SortingUnit
+  public sealed class SelectionSort : SortingUnit<SelectionSort>
   {
-    // -------------------------------------------------------------------------------------------------
-    /// <summary>Gibt den Namen der Unit zurück.</summary>
-    // -------------------------------------------------------------------------------------------------
-    public override String Name
-    {
-      get { return "Selection Sort"; }
-    }
-
     // -------------------------------------------------------------------------------------------------
     /// <summary>Implementierung für Selection Sort.</summary>
     /// <param name="values">Array mit Werten die sortiert werden sollen.</param>

@@ -12,21 +12,16 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Sorting
   /// <summary>Die Abstrakte Basisklasse SortinUnit kapselt die gleichen Aufrufe der einzelnen Units des
   /// Kapitel Sortings um Redundanzen zu vermeiden..</summary>
   // ===================================================================================================
-  public abstract class SortingUnit : IConsoleMenuCommand
+  public abstract class SortingUnit<T>
   {
-    // -------------------------------------------------------------------------------------------------
-    /// <summary>Gibt den Namen der Unit zurück.</summary>
-    // -------------------------------------------------------------------------------------------------
-    public abstract string Name { get; }
-
     // -------------------------------------------------------------------------------------------------
     /// <summary>Führt die Sorting Method aus und ermittelt die benötigte Zeit.</summary>
     // -------------------------------------------------------------------------------------------------
-    public void Run()
+    public static void Main(String[] args)
     {
       var values = IO.ReadInts("Geben Sie Ihre Zahlen ein (Leerzeichen getrennt): ");
 
-      var methodInfo = GetType().GetMethod("Sort");
+      var methodInfo = typeof(T).GetMethod("Sort");
       var sortingMethod = (Action<Int32[]>)Delegate.CreateDelegate(typeof(Action<Int32[]>), methodInfo);
 
       var timer = new System.Diagnostics.Stopwatch();
@@ -39,21 +34,6 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Sorting
       IO.PrintLine();
       IO.PrintLine("Das Ergebnis (Dauer: {0}):", timer.Elapsed.ToString("ss\\.fffff"));
       IO.PrintLine(values);
-    }
-
-    // -------------------------------------------------------------------------------------------------
-    /// <summary>Prüft ob das übergebene Array eine aufstegende Reihe ist.</summary>
-    /// <param name="result">Das zu prüfende Werte Array.</param>
-    // -------------------------------------------------------------------------------------------------
-    internal static void ValidateResult(Int32[] result)
-    {
-      for (var index = 1; index < result.Length; index++)
-      {
-        if (result[index] < result[index - 1])
-        {
-          IO.Error("Das übergebene Array ist keine aufsteigende Reihe.");
-        }
-      }
     }
   }
 }

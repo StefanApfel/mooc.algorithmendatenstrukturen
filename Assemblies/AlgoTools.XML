@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AlgoTools</name>
+    </assembly>
+    <members>
+        <member name="T:AlgoTools.IO">
+            <summary>Die Klasse ist eine lose C# Implementierung der Java Bibliothek AlgoTools.IO welches hier
+            https://www.iwi.hs-karlsruhe.de/lab/info01/Tutorial/download/AlgoTools/AlgoTools.IO.html herunter
+            geladen werden kann. Im wesentlichen Kapselt die Klasse Aufrufe der C# Klasse Console mit Checks
+            oder weiteren Verarbeitungsschritten (z.B. ReadInts wandelt einen String in ein Integer Array).
+            Die Klasse orientiert sich an den .NET Bennenungsrichtlinien.</summary>
+        </member>
+        <member name="M:AlgoTools.IO.ReadInt(System.String)">
+            <summary>Liest eine Integer Eingabe.</summary>
+            <param name="prompt">Optionaler Abfragetext.</param>
+            <returns>Gibt ein Integerwert zurück.</returns>
+        </member>
+        <member name="M:AlgoTools.IO.ReadInts(System.String)">
+            <summary>Liest ein Array von Integer Eingaben.</summary>
+            <param name="prompt">Optionaler Abfragetext.</param>
+            <returns>Ein Int32 Array.</returns>
+        </member>
+        <member name="M:AlgoTools.IO.ReadChars(System.String)">
+            <summary>Liest eine Eingabe von Zeichen(Chars).</summary>
+            <param name="prompt">Optionaler Abfragetext.</param>
+            <returns>Ein Char-Array.</returns>
+        </member>
+        <member name="M:AlgoTools.IO.ReadLine(System.String)">
+            <summary>Liest eine Zeichenkette ein.</summary>
+            <param name="prompt">Optionaler Abfragetext.</param>
+            <returns>Eine Zeichenkette (String).</returns>
+        </member>
+        <member name="M:AlgoTools.IO.Error(System.String,System.Object[])">
+            <summary>Wirft eine Fehlermeldung.</summary>
+            <param name="text">Fehlermeldungs Text.</param>
+            <param name="args">Optionale Platzhalter Argumente.</param>
+        </member>
+    </members>
+</doc>

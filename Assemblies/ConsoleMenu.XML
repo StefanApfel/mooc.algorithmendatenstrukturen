@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleMenu</name>
+    </assembly>
+    <members>
+        <member name="T:StefanApfel.ConsoleMenu">
+            <summary>Die Klasse ConsoleMenu konstruiert ein einfaches hierachisches Menü welches aus Knoten
+            und Commands besteht. Während Knoten weiter verschachtelt sein können, werden Commands ausgeführt.
+            Die Klasse implementiert IDisposable um in usings verwendet werden zu könne.</summary>
+        </member>
+        <member name="T:StefanApfel.IConsoleMenuNode">
+            <summary>Definiert den Contract für einen ConsolenMenu Knoten.</summary>
+        </member>
+        <member name="T:StefanApfel.IConsoleMenuItem">
+            <summary>Definiert den Basis Contract für ein ConsoleMenuItem.</summary>
+        </member>
+        <member name="P:StefanApfel.IConsoleMenuItem.Name">
+            <summary>Gibt den Namen des Knoten zurück.</summary>
+        </member>
+        <member name="P:StefanApfel.IConsoleMenuNode.Items">
+            <summary>Gibt die Items des Knoten zurück.</summary>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.#ctor(System.String,System.String)">
+            <summary>Erstellt eine neue Instanz der Klasse ConsoleMenu.</summary>
+            <param name="title">Titel der Anwendung</param>
+            <param name="rootName">Name des Basis Menüs.</param>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.Show">
+            <summary>Zeigt das Menü an.</summary>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.ShowItems(StefanApfel.IConsoleMenuNode)">
+            <summary>Listet die Menüpunkte.</summary>
+            <param name="rootNode">Aktuelelr Basis Knoten.</param>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.SelectItem(System.Collections.Generic.IReadOnlyList{StefanApfel.IConsoleMenuItem})">
+            <summary>Wählt einen Menüpunkt.</summary>
+            <param name="items">Die zur Auswahl stehenden Menüpunkte.</param>
+            <returns>true wenn das aktuelle Menü noch kativ ist, false wenn abgebrochen wurde.</returns>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.RunCommand(StefanApfel.IConsoleMenuCommand)">
+            <summary>Führt das Command aus.</summary>
+            <param name="command">Das Command das ausgeführtw erden soll.</param>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.WriteNotice(System.String)">
+            <summary>Fügt einen Hinweis unter der aktellen Zeile hinzu.</summary>
+            <param name="notice">Hinweistext.</param>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.StartScreen(System.String)">
+            <summary>Startet einen neuen Screen (Bildschirm-Maske) und schreibt den Header.</summary>
+            <param name="title">Titel des Screens.</param>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.System#IDisposable#Dispose">
+            <summary>Disposed das Consolen Menü.</summary>
+        </member>
+        <member name="P:StefanApfel.ConsoleMenu.Items">
+            <summary>Gibt die Items des Menüs zurück.</summary>
+        </member>
+        <member name="P:StefanApfel.ConsoleMenu.Name">
+            <summary>Gibt den Namen des Menüs zurück.</summary>
+        </member>
+        <member name="T:StefanApfel.ConsoleMenu.Node">
+            <summary>Die Klasse ConsoleMenu.Node implementiert IConsoleMenuNode und repräsentiert einen Menü
+            Knoten der weitere Menüknoten oder ein ausfühbares Command besitzt.</summary>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.Node.#ctor(System.String,StefanApfel.IConsoleMenuItem[])">
+            <summary>Erstellt eine neue Instanz der Klasse ConsoleMenu.Node.</summary>
+            <param name="nodeName">Name des Knoten.</param>
+            <param name="items">Optionale vor initialzierung der Items.</param>
+        </member>
+        <member name="P:StefanApfel.ConsoleMenu.Node.Name">
+            <summary>Gibt den Namen des Knoten zurück.</summary>
+        </member>
+        <member name="P:StefanApfel.ConsoleMenu.Node.Items">
+            <summary>Gibt die Items des Knoten zurück.</summary>
+        </member>
+        <member name="T:StefanApfel.ConsoleMenu.Command`1">
+            <summary>Die Klasse ConsoleMenu.Command implementiert IConsoleMenuCommand und repräsentiert ein
+            ausführbares Command.</summary>
+        </member>
+        <member name="T:StefanApfel.IConsoleMenuCommand">
+            <summary>Definiert den Contract für ein ConsolenMenu Command.</summary>
+        </member>
+        <member name="M:StefanApfel.IConsoleMenuCommand.Run">
+            <summary>Führt das Command aus.</summary>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.Command`1.#ctor(System.String,System.Action{`0},`0)">
+            <summary>Erstellt eine neue Instanz der Klasse ConsoleMenu.Command.</summary>
+            <param name="name">Name des Commands.</param>
+            <param name="command">Action-Delegate zu der Methode die Aufgerufen werden soll.</param>
+            <param name="args">Optionale Argumente.</param>
+        </member>
+        <member name="M:StefanApfel.ConsoleMenu.Command`1.Run">
+            <summary>Führt das Command aus.</summary>
+        </member>
+        <member name="P:StefanApfel.ConsoleMenu.Command`1.Name">
+            <summary>Gibt den Namen des Knoten zurück.</summary>
+        </member>
+        <member name="P:StefanApfel.ConsoleMenu.Command`1.CommandCallback">
+            <summary>Gibt den auszuführenden Callback zurück.</summary>
+        </member>
+        <member name="P:StefanApfel.ConsoleMenu.Command`1.Arguments">
+            <summary>Gibt Argumente zurück die den Callback übergeben werden.</summary>
+        </member>
+    </members>
+</doc>

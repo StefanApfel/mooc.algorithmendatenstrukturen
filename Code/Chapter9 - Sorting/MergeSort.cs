@@ -14,16 +14,8 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Sorting
   /// die kompletten Daten auf sortierte Pärchen reduziert und beim Mergen mit dem nächsten Pärchen in
   /// die Endgültige Reihenfolge gebracht.</remarks>
   // ===================================================================================================
-  public sealed class MergeSort : SortingUnit
+  public sealed class MergeSort : SortingUnit<MergeSort>
   {
-    // -------------------------------------------------------------------------------------------------
-    /// <summary>Gibt den Namen der Unit zurück.</summary>
-    // -------------------------------------------------------------------------------------------------
-    public override String Name
-    {
-      get { return "Merge Sort"; }
-    }
-
     // -------------------------------------------------------------------------------------------------
     /// <summary>Implementierung für Selection Sort.</summary>
     /// <param name="values">Array mit Werten die sortiert werden sollen.</param>

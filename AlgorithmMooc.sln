@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmMooc", "AlgorithmMooc.csproj", "{42D5282E-6EAE-46F1-852B-A1C6ABD01793}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmMooc", "Code\AlgorithmMooc.csproj", "{42D5282E-6EAE-46F1-852B-A1C6ABD01793}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{BC5C01CA-982A-49DC-99F5-B31CC42A2309}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{A861E43C-198D-4FD9-9107-ADE1E9A1620A}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\AlgoTools.dll = Assemblies\AlgoTools.dll
+		Assemblies\ConsoleMenu.dll = Assemblies\ConsoleMenu.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +26,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42D5282E-6EAE-46F1-852B-A1C6ABD01793} = {BC5C01CA-982A-49DC-99F5-B31CC42A2309}
 	EndGlobalSection
 EndGlobal

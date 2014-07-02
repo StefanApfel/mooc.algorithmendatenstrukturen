@@ -11,16 +11,8 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Sorting
   /// <summary>Implementiert einen BubbleSort Algorithmus zum Sortieren von Daten nach Kapitel 9.2 des 
   /// Iversity MOOCs Algorithmen und Datenstrukturen.</summary>
   // ===================================================================================================
-  public sealed class BubbleSort : SortingUnit
+  public sealed class BubbleSort : SortingUnit<BubbleSort>
   {
-    // -------------------------------------------------------------------------------------------------
-    /// <summary>Gibt den Namen der Unit zurück.</summary>
-    // -------------------------------------------------------------------------------------------------
-    public override String Name
-    {
-      get { return "Bubble Sort"; }
-    }
-
     // -------------------------------------------------------------------------------------------------
     /// <summary>Implementierung für Bubble Sort.</summary>
     /// <param name="values">Array mit Werten die sortiert werden sollen.</param>

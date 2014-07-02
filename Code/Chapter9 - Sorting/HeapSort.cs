@@ -11,16 +11,8 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Sorting
   /// <summary>Implementiert einen HeapSort Algorithmus zum Sortieren von Daten nach Kapitel 9.5 des 
   /// Iversity MOOCs Algorithmen und Datenstrukturen.</summary>
   // ===================================================================================================
-  public sealed class HeapSort : SortingUnit
+  public sealed class HeapSort : SortingUnit<HeapSort>
   {
-    // -------------------------------------------------------------------------------------------------
-    /// <summary>Gibt den Namen der Unit zurück.</summary>
-    // -------------------------------------------------------------------------------------------------
-    public override String Name
-    {
-      get { return "Heap Sort"; }
-    }
-
     // -------------------------------------------------------------------------------------------------
     /// <summary>Implementierung für Heap Sort.</summary>
     /// <param name="values">Array mit Werten die sortiert werden sollen.</param>
