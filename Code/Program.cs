@@ -42,7 +42,17 @@ namespace StefanApfel.Learning.AlgorithemDataStructures
             chapter5.Add("Lineare & Binäre Suche",     Arrays.Suche.Main);
             chapter5.Add("Matrix (Hausaufgabe)",       Arrays.ZeilenNummerNorm.Main);
             chapter5.Add("König Dodon (Hausaufgabe)",  Arrays.Dodon.Main);
-                                         
+
+        // Kapitel 7 - Rekursion ------------------------------------------------------------------
+        var chapter7 = new ConsoleMenu.Node("Rekursion");
+            chapter7.Add("Fakultät",                   Recursion.Fakultaet.Main);
+            chapter7.Add("Potenzieren",                Recursion.Potenzieren.Main);
+            chapter7.Add("Größter gemeinsamer Teiler", Recursion.GroessterGemeinsamerTeiler.Main);
+            chapter7.Add("Fibonacci",                  Recursion.Fibonacci.Main);
+            chapter7.Add("Türme von Hanoi",            Recursion.TuermeVonHanoi.Main);
+            chapter7.Add("Wurzel 2 (Hausaufgabe)",     Recursion.WurzelZwei.Main);
+            chapter7.Add("Damenproblem (Hausaufgabe)", Recursion.Damenproblem.Main);
+              
         // Kapitel 9 - Sortieren ------------------------------------------------------------------
         var chapter9 = new ConsoleMenu.Node          ("Sortieren");
             chapter9.Add("Selection Sort",             Sorting.SelectionSort.Main);
@@ -56,29 +66,12 @@ namespace StefanApfel.Learning.AlgorithemDataStructures
         // Füge die Kapitel dem Menü hinzu.
         chapterMenu.Items.Add(chapter3);
         chapterMenu.Items.Add(chapter5);
+        chapterMenu.Items.Add(chapter7);
         chapterMenu.Items.Add(chapter9);
 
         // Startet das Menu...
         chapterMenu.Show();
       }
-    }
-  }
-
-  // ===================================================================================================
-  /// <summary>Helferklasse um die erforderlichen usecases an ConsoleMenu zu erleichertn.</summary>
-  // ===================================================================================================
-  internal static class ConsoleMenuExtension
-  {
-    // -------------------------------------------------------------------------------------------------
-    /// <summary>Fügt einer IConsoleMenuNode ein neues Command hinzu.</summary>
-    /// <param name="node">Aktueller Menu Knoten</param>
-    /// <param name="name">Name des Menüknotens</param>
-    /// <param name="action">Callback zur aufzurufenden Aktion.</param>
-    /// <param name="argument">Optionale Argumente.</param>
-    // -------------------------------------------------------------------------------------------------
-    internal static void Add(this IConsoleMenuNode node, String name, Action<String[]> action, params String[] argument)
-    {
-      node.Items.Add(new ConsoleMenu.Command<String[]>(name, action, argument));
     }
   }
 }
