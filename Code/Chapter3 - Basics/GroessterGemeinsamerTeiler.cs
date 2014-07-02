@@ -29,8 +29,9 @@ namespace StefanApfel.Learning.AlgorithemDataStructures.Basics
 
       while (value2 != 0)
       {
+        var rest = value1 % value2;
         value1 = value2;
-        value2 = value1 % value2;
+        value2 = rest;
       }
 
       IO.PrintLine("Der größte gemeinsame Teiler is {0}", value1);
